@@ -12,13 +12,15 @@ function formHandler(event) {
     const newTask = document.createElement('li');
     newTask.innerText = taskText;
 
-    deleteBtn.addEventListener('click', deleteTask)
-
     const deleteBtn = document.createElement('button');
     deleteBtn.setAttribute('role', 'button');
     deleteBtn.classList.add('fas', 'fa-delete-left');
     deleteBtn.style['margin-left'] = '15px';
     newTask.append(deleteBtn);
+
+    deleteBtn.addEventListener('click', function () {
+        this.closest('li').remove();
+    })
 
     todoList.append(newTask);
 
@@ -27,6 +29,3 @@ function formHandler(event) {
     todoInput.focus();
 }
 
-function deleteTask() {
-    
-}
