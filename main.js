@@ -1,31 +1,7 @@
-const todoList = document.querySelector('#todo-list');
-const todoForm = document.querySelector('#todo-form');
-const todoInput = document.querySelector('#todo-input');
+var i1 = document.getElementById("i1");
 
-todoForm.addEventListener('submit', formHandler)
-
-function formHandler(event) {
-    event.preventDefault();
-
-    const taskText = todoInput.value;
-
-    const newTask = document.createElement('li');
-    newTask.innerText = taskText;
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.setAttribute('role', 'button');
-    deleteBtn.classList.add('fas', 'fa-delete-left');
-    deleteBtn.style['margin-left'] = '15px';
-    newTask.append(deleteBtn);
-
-    deleteBtn.addEventListener('click', function () {
-        this.closest('li').remove();
-    })
-
-    todoList.append(newTask);
-
-    todoInput.value = '';
-
-    todoInput.focus();
-}
-
+// Добавляем обработчик события клика на блок
+i1.addEventListener("click", function() {
+  // Переходим по ссылке
+  window.open("https://www.avito.ru/astrahan/chasy_i_ukrasheniya/casio_g-shock_serye_3124500435", "_blank");
+});
