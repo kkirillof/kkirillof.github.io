@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+    <head>
+    <!-- Yandex Games SDK -->
+    <script src="https://yandex.ru/games/sdk/v2"></script>
+    <script>
+    YaGames
+    .init()
+    .then(ysdk => {
+        console.log('Yandex SDK initialized');
+        window.ysdk = ysdk;
+    });
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | My project (1)</title>
+    <title>Unity WebGL Player | clicker</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +31,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">My project (1)</div>
+        <div id="unity-build-title">clicker</div>
       </div>
     </div>
     <script>
@@ -57,11 +68,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/clicker.loader.js";
+      var loaderUrl = buildUrl + "/Unity Project.loader.js";
       var config = {
-        dataUrl: buildUrl + "/clicker.data",
-        frameworkUrl: buildUrl + "/clicker.framework.js",
-        codeUrl: buildUrl + "/clicker.wasm",
+        dataUrl: buildUrl + "/Unity Project.data",
+        frameworkUrl: buildUrl + "/Unity Project.framework.js",
+        codeUrl: buildUrl + "/Unity Project.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "My project (1)",
